@@ -1,5 +1,11 @@
 @import 'tailwindcss';
 
+@layer base {
+  button {
+    cursor: pointer;
+  }
+}
+
 @layer components {
   .size-container {
     margin-inline: auto;
