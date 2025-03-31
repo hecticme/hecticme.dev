@@ -6,6 +6,8 @@
   --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   button {
     cursor: pointer;
