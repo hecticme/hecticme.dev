@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
 import { routes } from '~/router'
+
+import ThemeToggler from '~/components/ThemeToggler.vue'
 </script>
 
 <template>
@@ -18,9 +19,7 @@ import { routes } from '~/router'
       </div>
 
       <div class="flex gap-6">
-        <button class="text-zinc-500 hover:text-zinc-300 transition-colors">
-          <Icon icon="ph:sun-duotone" />
-        </button>
+        <ThemeToggler />
       </div>
     </div>
   </header>
