@@ -11,6 +11,7 @@ import ThemeToggler from '~/components/ThemeToggler.vue'
         <RouterLink
           v-for="(item, index) of routes"
           :key="index"
+          active-class="text-zinc-700 dark:text-zinc-300"
           class="text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
           :to="item.path"
         >
