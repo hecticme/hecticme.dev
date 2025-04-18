@@ -20,4 +20,25 @@
     padding-inline: calc(var(--spacing) * 5);
     max-width: var(--container-3xl);
   }
+
+  .link {
+    color: var(--color-zinc-900);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: calc(var(--spacing) * 1);
+    text-decoration-color: var(--color-zinc-500);
+    transition: text-decoration-color var(--default-transition-duration) var(--default-transition-timing-function);
+
+    &:hover {
+      text-decoration-color: var(--color-zinc-900);
+    }
+
+    &:where(.dark, .dark *) {
+      color: var(--color-zinc-100);
+
+      &:hover {
+        text-decoration-color: var(--color-zinc-100);
+      }
+    }
+  }
 }
