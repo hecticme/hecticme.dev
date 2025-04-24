@@ -62,5 +62,6 @@
 @utility size-container {
   margin-inline: auto;
   max-width: 100rem;
+  width: 100%;
   padding-inline: calc(var(--spacing) * 5);
 }
