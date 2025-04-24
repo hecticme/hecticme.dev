@@ -5,9 +5,9 @@ import ThemeToggler from '~/components/ThemeToggler.vue'
 </script>
 
 <template>
-  <header class="border-b border-b-zinc-300 dark:border-b-zinc-700 border-dashed">
-    <div class="size-container py-4 flex justify-between gap-2 text-sm font-medium">
-      <div class="flex gap-6">
+  <header class="border-b border-b-zinc-300 dark:border-b-zinc-700 border-dashed bg-prototype">
+    <div class="size-container flex justify-between text-sm">
+      <div class="border-x border-zinc-300 dark:border-zinc-700 border-dashed px-4 py-4 flex gap-6 font-medium bg-zinc-100 dark:bg-zinc-900">
         <RouterLink
           v-for="(item, index) of routes"
           :key="index"
@@ -19,7 +19,7 @@ import ThemeToggler from '~/components/ThemeToggler.vue'
         </RouterLink>
       </div>
 
-      <div class="flex gap-6">
+      <div class="border-x border-zinc-300 dark:border-zinc-700 border-dashed px-4 py-4 flex gap-6 bg-zinc-100 dark:bg-zinc-900">
         <ThemeToggler />
       </div>
     </div>
