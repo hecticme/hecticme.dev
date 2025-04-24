@@ -42,3 +42,25 @@
     }
   }
 }
+
+@utility bg-prototype {
+  background-image: repeating-linear-gradient(
+    315deg,
+    color-mix(in oklab, var(--color-zinc-700) 7%, transparent) 0,
+    color-mix(in oklab, var(--color-zinc-700) 7%, transparent) 1px,
+    transparent 0,
+    transparent 50%
+  );
+  background-size: 12px 12px;
+  background-attachment: fixed;
+
+  &:where(.dark, .dark *) {
+    background-image: repeating-linear-gradient(
+      315deg,
+      color-mix(in oklab, var(--color-zinc-300) 7%, transparent) 0,
+      color-mix(in oklab, var(--color-zinc-300) 7%, transparent) 1px,
+      transparent 0,
+      transparent 50%
+    );
+  }
+}
