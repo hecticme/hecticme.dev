@@ -6,6 +6,8 @@ import {
 } from 'vue'
 import { RouterLink } from 'vue-router'
 
+type VariantProp = 'outlined' | 'text'
+
 const props = defineProps({
   asLink: {
     type: Boolean,
@@ -21,6 +23,18 @@ const props = defineProps({
     required: false,
     default: '',
   },
+  variant: {
+    type: String as PropType<VariantProp>,
+    required: false,
+    default: 'outlined',
+    validator(value: string) {
+      return [
+        'outlined',
+        'text',
+      ]
+        .includes(value)
+    },
+  },
 })
 
 const componentToRender = computed(
@@ -33,7 +47,10 @@ const componentToRender = computed(
 <template>
   <component
     :is="componentToRender"
-    class="group inline-block border border-zinc-300 dark:border-zinc-700 px-4 py-1 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors"
+    class="group inline-block transition-colors"
+    :class="{
+      'border border-zinc-300 dark:border-zinc-700 px-4 py-1 hover:bg-zinc-200 dark:hover:bg-zinc-800': props.variant === 'outlined',
+    }"
   >
     <span class="grid overflow-hidden">
       <span
