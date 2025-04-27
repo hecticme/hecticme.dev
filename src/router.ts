@@ -26,6 +26,14 @@ export const routes = [
   },
 ]
 
+export const displayedRoutes = routes.filter(
+  route => [
+    '/',
+    '/about',
+    '/blog',
+  ].includes(route.path)
+)
+
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,

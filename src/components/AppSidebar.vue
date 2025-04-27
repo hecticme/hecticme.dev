@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { routes } from '~/router'
+import { displayedRoutes } from '~/router'
 import { Icon } from '@iconify/vue'
 
 const props = defineProps({
@@ -36,7 +36,7 @@ const emit = defineEmits([
 
         <div class="flex flex-col gap-4">
           <RouterLink
-            v-for="(item, index) of routes"
+            v-for="(item, index) of displayedRoutes"
             :key="index"
             active-class="text-zinc-700 dark:text-zinc-300"
             class="text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
