@@ -47,7 +47,7 @@ const componentToRender = computed(
 <template>
   <component
     :is="componentToRender"
-    class="group inline-block transition-colors"
+    class="group inline-block transition-colors select-none"
     :class="{
       'border border-zinc-300 dark:border-zinc-700 px-4 py-1 hover:bg-zinc-200 dark:hover:bg-zinc-800': props.variant === 'outlined',
     }"
