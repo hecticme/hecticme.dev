@@ -10,7 +10,7 @@ export const routes = [
     component: HomeView,
   },
   {
-    label: 'About Me',
+    label: 'About',
     path: '/about',
     name: 'about',
     // route level code-splitting
