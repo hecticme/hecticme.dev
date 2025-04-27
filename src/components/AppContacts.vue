@@ -43,7 +43,10 @@ async function copyEmail() {
         {{ email }}
       </a>
       <button
-        class="grid"
+        class="grid text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
+        :class="{
+          'text-zinc-700 dark:text-zinc-300': copyTimeout,
+        }"
         @click="copyEmail"
       >
         <Transition>
