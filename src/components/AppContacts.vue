@@ -49,18 +49,20 @@ async function copyEmail() {
         }"
         @click="copyEmail"
       >
-        <Transition>
-          <Icon
-            v-if="!copyTimeout"
-            class="w-4 h-4 row-span-full col-span-full"
-            icon="ph:copy-simple-duotone"
-          />
-          <Icon
-            v-else
-            class="w-4 h-4 row-span-full col-span-full"
-            icon="ph:check-square-duotone"
-          />
-        </Transition>
+        <Icon
+          class="w-4 h-4 row-span-full col-span-full transition-[opacity,scale]"
+          :class="{
+            'opacity-0 scale-40': copyTimeout,
+          }"
+          icon="ph:copy-simple-duotone"
+        />
+        <Icon
+          class="w-4 h-4 row-span-full col-span-full transition-[opacity,scale]"
+          :class="{
+            'opacity-0 scale-40': !copyTimeout,
+          }"
+          icon="ph:check-square-duotone"
+        />
       </button>
     </div>
 
@@ -81,17 +83,3 @@ async function copyEmail() {
     </div>
   </div>
 </template>
-
-<style scoped>
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 150ms var(--default-transition-timing-function),
-    scale 150ms var(--default-transition-timing-function);
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
-  scale: 0.4;
-}
-</style>
