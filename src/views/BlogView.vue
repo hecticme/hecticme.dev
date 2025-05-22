@@ -1,5 +1,5 @@
 <template>
-  <div class="size-prose">
+  <div class="size-container">
     <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight">
       Blog
     </h1>
