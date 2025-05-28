@@ -4,7 +4,6 @@ import { useRouter } from 'vue-router'
 import { displayedRoutes } from '~/router'
 
 import { Icon } from '@iconify/vue'
-import ThemeToggler from '~/components/ThemeToggler.vue'
 import AppSidebar from '~/components/AppSidebar.vue'
 
 const isOpen = ref(false)
@@ -44,7 +43,7 @@ router.afterEach(() => {
       </div>
 
       <div class="border-x border-zinc-300 border-dashed px-4 py-4 flex gap-6 bg-zinc-100">
-        <ThemeToggler />
+        <!-- ... -->
       </div>
     </div>
 
