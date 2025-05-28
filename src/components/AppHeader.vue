@@ -27,7 +27,7 @@ router.afterEach(() => {
           v-for="(item, index) of displayedRoutes"
           :key="index"
           active-class="text-zinc-700"
-          class="hidden md:inline text-zinc-500 hover:text-zinc-700 transition-colors"
+          class="hidden md:inline select-none text-zinc-500 hover:text-zinc-700 transition-colors"
           :to="item.path"
         >
           {{ item.label }}
