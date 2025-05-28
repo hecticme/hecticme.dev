@@ -49,7 +49,7 @@ const componentToRender = computed(
     :is="componentToRender"
     class="group inline-block transition-colors select-none"
     :class="{
-      'border border-zinc-300 dark:border-zinc-700 px-4 py-1 hover:bg-zinc-200 dark:hover:bg-zinc-800': props.variant === 'outlined',
+      'border border-zinc-300 px-4 py-1 hover:bg-zinc-200': props.variant === 'outlined',
     }"
   >
     <span class="grid overflow-hidden">

@@ -19,7 +19,7 @@ const emit = defineEmits([
     <Transition>
       <div
         v-if="props.isOpen"
-        class="fixed inset-0 z-20 overflow-y-auto px-12 py-8 flex flex-col gap-10 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300"
+        class="fixed inset-0 z-20 overflow-y-auto px-12 py-8 flex flex-col gap-10 bg-zinc-100 text-zinc-700"
       >
         <div class="flex justify-end">
           <button
@@ -38,8 +38,8 @@ const emit = defineEmits([
           <RouterLink
             v-for="(item, index) of displayedRoutes"
             :key="index"
-            active-class="text-zinc-700 dark:text-zinc-300"
-            class="text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
+            active-class="text-zinc-700"
+            class="text-zinc-500 hover:text-zinc-700 transition-colors"
             :to="item.path"
           >
             {{ item.label }}

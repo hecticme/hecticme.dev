@@ -6,8 +6,6 @@
   --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @layer base {
   button {
     cursor: pointer;
@@ -26,14 +24,6 @@
     &:hover {
       text-decoration-color: var(--color-zinc-900);
     }
-
-    &:where(.dark, .dark *) {
-      color: var(--color-zinc-100);
-
-      &:hover {
-        text-decoration-color: var(--color-zinc-100);
-      }
-    }
   }
 }
 
@@ -47,16 +37,6 @@
   );
   background-size: 12px 12px;
   background-attachment: fixed;
-
-  &:where(.dark, .dark *) {
-    background-image: repeating-linear-gradient(
-      315deg,
-      color-mix(in oklab, var(--color-zinc-300) 7%, transparent) 0,
-      color-mix(in oklab, var(--color-zinc-300) 7%, transparent) 1px,
-      transparent 0,
-      transparent 50%
-    );
-  }
 }
 
 @utility size-container {

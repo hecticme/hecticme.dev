@@ -21,14 +21,14 @@ router.afterEach(() => {
 </script>
 
 <template>
-  <header class="border-b border-b-zinc-300 dark:border-b-zinc-700 border-dashed bg-prototype">
+  <header class="border-b border-b-zinc-300 border-dashed bg-prototype">
     <div class="size-container flex justify-between text-sm">
-      <div class="border-x border-zinc-300 dark:border-zinc-700 border-dashed px-4 py-4 flex gap-6 font-medium bg-zinc-100 dark:bg-zinc-900">
+      <div class="border-x border-zinc-300 border-dashed px-4 py-4 flex gap-6 font-medium bg-zinc-100">
         <RouterLink
           v-for="(item, index) of displayedRoutes"
           :key="index"
-          active-class="text-zinc-700 dark:text-zinc-300"
-          class="hidden md:inline text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
+          active-class="text-zinc-700"
+          class="hidden md:inline text-zinc-500 hover:text-zinc-700 transition-colors"
           :to="item.path"
         >
           {{ item.label }}
@@ -43,7 +43,7 @@ router.afterEach(() => {
         </button>
       </div>
 
-      <div class="border-x border-zinc-300 dark:border-zinc-700 border-dashed px-4 py-4 flex gap-6 bg-zinc-100 dark:bg-zinc-900">
+      <div class="border-x border-zinc-300 border-dashed px-4 py-4 flex gap-6 bg-zinc-100">
         <ThemeToggler />
       </div>
     </div>

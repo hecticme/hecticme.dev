@@ -35,17 +35,17 @@ async function copyEmail() {
 
 <template>
   <div class="flex flex-wrap items-center gap-4">
-    <div class="border border-zinc-300 dark:border-zinc-700 border-dashed flex items-center gap-1.5 px-2 py-1 bg-prototype">
+    <div class="border border-zinc-300 border-dashed flex items-center gap-1.5 px-2 py-1 bg-prototype">
       <a
-        class="text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
+        class="text-zinc-500 hover:text-zinc-700 transition-colors"
         :href="`mailto:${email}`"
       >
         {{ email }}
       </a>
       <button
-        class="grid text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
+        class="grid text-zinc-500 hover:text-zinc-700 transition-colors"
         :class="{
-          'text-zinc-700 dark:text-zinc-300': copyTimeout,
+          'text-zinc-700': copyTimeout,
         }"
         @click="copyEmail"
       >
@@ -70,7 +70,7 @@ async function copyEmail() {
       <a
         v-for="(link, index) of socialLinks"
         :key="index"
-        class="text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
+        class="text-zinc-500 hover:text-zinc-700 transition-colors"
         :href="link.href"
         rel="noopener noreferrer"
         target="_blank"
